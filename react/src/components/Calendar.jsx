@@ -1,4 +1,3 @@
-import React from 'react';
 import '../css/Calendar.css';
 
 const Calendar = () => {

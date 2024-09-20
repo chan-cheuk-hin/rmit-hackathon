@@ -1,5 +1,5 @@
-import { useState } from 'react';
 import './../css/Home.css';
+import { useState } from 'react';
 import Calendar from '../components/Calendar';
 
 const Home = () => {
