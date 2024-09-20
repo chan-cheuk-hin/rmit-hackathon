@@ -6,7 +6,7 @@ import Calendar from '../components/Calendar'
 const Home = () => {
     const [collapsed, setCollapsed] = useState(true);
     const eventArray = [<div>sampleExpo1</div>, <div>sampleExpo2</div>, <div>sampleExpo3</div>];
-    const notifArray = [<div>sampleExpo1</div>, <div>sampleExpo2</div>, <div>sampleExpo3</div>];
+    const notifArray = [<div>sampleNotif1</div>, <div>sampleNotif2</div>, <div>sampleNotif3</div>];
 
     return (
         <div className='homeGrid'>
