@@ -36,24 +36,3 @@
     transform: rotate(360deg);
   }
 }
-/* -------------- navBar ------------------ */
-/* .navBar {
-  width: 100vw;
-  height: 50px;
-  background-color: #61dafb;
-}
-
-.gridContainer {
-  justify-content: end;
-  display: grid;
-  grid-template-columns: calc(100vw - 200px) repeat(2, 100px);
-  grid-template-rows: 50px;
-}
-
-.navButton{
-  align-self: center;
-  justify-self: center;
-  background-color: white;
-  height: 100%  ;
-  width: 100%;
-} */
