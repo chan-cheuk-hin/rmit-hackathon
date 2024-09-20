@@ -1,20 +1,21 @@
 import { Link } from "react-router-dom";
+import React from 'react';
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
 
-const Navbar = () => {
+const NavBar = () => {
   return (
-    <nav className="navBar">
-        <div className="gridContainer">
-            <h1 className="navLogo">Our Name</h1>
-            <button className="navButton">
-                <Link to="/home">Home</Link>
-            </button>
-            <button className="navButton">
-            <Link to="/profile">Profile</Link>
-            </button>
-        </div>
-        
-    </nav>
+    <Navbar bg="dark" data-bs-theme="dark">
+        <Container>
+        <Navbar.Brand href="home">Expo Connect</Navbar.Brand>
+        <Nav className="me-auto">
+            <Nav.Link href="home">Home</Nav.Link>
+            <Nav.Link href="profile">Profile</Nav.Link>
+        </Nav>
+        </Container>
+    </Navbar>
   );
-}
+};
 
-export default Navbar
+export default NavBar;

@@ -37,7 +37,7 @@
   }
 }
 /* -------------- navBar ------------------ */
-.navBar {
+/* .navBar {
   width: 100vw;
   height: 50px;
   background-color: #61dafb;
@@ -56,10 +56,4 @@
   background-color: white;
   height: 100%  ;
   width: 100%;
-}
-
-.navLogo {
-  align-self: center;
-  justify-self: start;
-  margin: 15px;
-}
+} */
