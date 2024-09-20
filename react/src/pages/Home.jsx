@@ -1,11 +1,19 @@
 import '../App.css';
 import { useState } from 'react';
 import Calendar from '../components/Calendar';
+import { Badge } from 'react-bootstrap';
 
 const Home = () => {
 	const [isCollapsed, setIsCollapsed] = useState(true);
 	const eventArray = [
-		<div>sampleExpo1</div>,
+		<div>
+            <Badge pill variant='primary'>
+                Science
+            </Badge>
+            <Badge pill variant='secondary'>
+                Technology
+            </Badge>sampleExpo1
+        </div>,
 		<div>sampleExpo2</div>,
 		<div>sampleExpo3</div>,
 	];
