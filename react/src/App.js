@@ -5,16 +5,15 @@ import Home from './pages/Home';
 import Profile from './pages/Profile';
 
 function App() {
-  return (
-    <div className="App">
-      <Routes>
-         <Route path='/' element={<Home/>} />
-         <Route path='/home' element={<Home/>} />
-         <Route path='/profile' element={<Profile/>} />
-       </Routes>
-     
-    </div>
-  );
+	return (
+		<div className='App'>
+			<Routes>
+				<Route path='/' element={<Home />} />
+				<Route path='/home' element={<Home />} />
+				<Route path='/profile' element={<Profile />} />
+			</Routes>
+		</div>
+	);
 }
 
 export default App;
