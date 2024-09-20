@@ -1,4 +1,4 @@
-import '../css/Calendar.css';
+import '../App.css';
 
 const Calendar = () => {
 	/*

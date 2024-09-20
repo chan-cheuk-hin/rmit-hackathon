@@ -1,0 +1,160 @@
+/* ---------------------------------------- BASIC SETUP ---------------------------------------- */
+/* Pages are fully capitalised with 40 dashes each side */
+/* Components have 20 dashes each side */
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+		'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+		sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+code {
+	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+		monospace;
+}
+
+/* ---------------------------------------- PAGES ---------------------------------------- */
+
+/* -------------------- Home -------------------- */
+.homeGrid {
+	display: grid;
+	/* Essentially, I want the left column to be collapsible, and the right column to expand to take it */
+	grid-template-columns: auto 1fr;
+	grid-template-rows: minmax(100vh, 1fr);
+}
+
+.sideBar {
+	width: 20vw;
+	height: 100%;
+	background-color: blue;
+}
+
+.mainContent {
+	width: 100%;
+	height: 100%;
+	background-color: rgb(109, 216, 136);
+	grid-column: 2;
+
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-auto-rows: min-content;
+}
+
+.collapsed {
+	width: 2vw;
+	background-color: rgb(173, 211, 255);
+	-webkit-transition: width 0.4s ease-in-out;
+	-moz-transition: width 0.4s ease-in-out;
+	-o-transition: width 0.4s ease-in-out;
+	transition: width 0.4s ease-in-out;
+}
+
+.uncollapsed {
+	width: 20vw;
+	background-color: rgb(167, 190, 255);
+	-webkit-transition: width 0.4s ease-in-out;
+	-moz-transition: width 0.4s ease-in-out;
+	-o-transition: width 0.4s ease-in-out;
+	transition: width 0.4s ease-in-out;
+}
+
+.collapseBtn {
+	position: absolute;
+}
+
+.title {
+	margin: 20px;
+	justify-self: center;
+	margin-right: 400px;
+}
+
+.placeholderExpo {
+	width: 700px;
+	height: 400px;
+	background-color: rgba(38, 38, 38, 0.594);
+	border-radius: 5px;
+	margin: 10px;
+	justify-self: center;
+}
+
+.placeholderNotif {
+	width: 80%;
+	height: 200px;
+	background-color: rgba(38, 38, 38, 0.594);
+	border-radius: 5px;
+	margin: 10px;
+	justify-self: center;
+}
+
+.hidden {
+	display: none;
+}
+
+.visible {
+	display: block;
+}
+/* -------------------- Profile -------------------- */
+.profile-card {
+	margin-top: 1rem;
+}
+
+/* ---------------------------------------- COMPONENTS ---------------------------------------- */
+
+/* -------------------- Calendar -------------------- */
+.calendar-container {
+	min-height: 300px;
+	width: 700px;
+	background-color: rgb(87, 87, 87);
+	justify-self: center !important;
+	align-self: center !important;
+	margin: 20px;
+}
+
+.calendar-container > div {
+	height: auto;
+	width: 100%;
+
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.calendar-container > div > p {
+	color: white;
+	text-align: center;
+}
+
+/* Calendar Dots */
+.calendar-container > div > div {
+	aspect-ratio: 1 / 1;
+	border-radius: 50%;
+}
+
+.not-in-month {
+	margin: 45%;
+	background-color: grey;
+}
+
+.unimportant-day {
+	margin: 30%;
+	background-color: grey;
+}
+
+.important-day {
+	margin: 10%;
+	background-color: white;
+}
+
+/* -------------------- NavBar -------------------- */
+.nav-bar {
+	text-decoration: none;
+}
