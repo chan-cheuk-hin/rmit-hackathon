@@ -1,0 +1,44 @@
+.icon {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgb(181, 149, 213);
+    display: inline-block;
+}
+
+.icon_design {
+    width: 250px;
+    height: 200px;
+    background-color: #e5b0e4;
+    border: 2px solid rgb(225, 217, 217);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.icon_design p {
+    margin: 0;
+    font-size: 30px;
+    color: black;
+}
+
+.icon_design p em {
+    color: #000;
+    font-weight: bold;
+}
+
+.join-button {
+    background-color: rgb(225, 217, 217);
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.join-button:hover {
+    background-color: rgb(220, 226, 173);
+}
