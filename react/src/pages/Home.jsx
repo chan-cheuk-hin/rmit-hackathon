@@ -11,7 +11,7 @@ const Home = () => {
 	const [isCollapsed, setIsCollapsed] = useState(true);
 	const [eventArray, setEventArray] = useState([])
 
-	const notifArray = [
+	const notifArray = [	
 		<FeatureBox1/>,
 		<FeatureBox/>,
 		<FeatureBox/>,

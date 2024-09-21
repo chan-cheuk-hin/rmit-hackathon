@@ -1,13 +1,19 @@
 import React, { useState } from "react";
 import "./../forms_update_project.css";
 
-const FormsUpdateProject = () => {
+
+const FormsUpdateProject = ({setPopup}) => {
     const [formData, setFormData] = useState({
         idTitle: "",
         description: "",
         completionStatus: false,
         estimatedCompletionDate: "",
+        link: ""
     });
+
+    const updateState = () => {
+        setPopup(false);
+    };
 
     // Handle form input change
     const handleChange = (e) => {
@@ -21,15 +27,39 @@ const FormsUpdateProject = () => {
     // Handle form submission
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Process the formData here
-        console.log(formData);
+        const data = new URLSearchParams();
+        data.append('message', 'addProject');
+        data.append('id', formData.idTitle);
+        data.append('title', formData.idTitle);
+        data.append('description', formData.description);
+        data.append('link', formData.link);
+        data.append('status', formData.completionStatus);
+        data.append('est', formData.estimatedCompletionDate);
+
+        fetch("https://cchandrew.com/api/", {
+        mode: 'cors',
+        method: 'POST',
+        body: data,
+        headers: {
+            'Accept': 'application/json',
+        },
+        })
+        .then(data => console.log(data))
+        setFormData({
+            idTitle: "",
+            description: "",
+            completionStatus: false,
+            estimatedCompletionDate: "",
+            link: ""
+        });
+        updateState();
     };
 
     return (
         <form onSubmit={handleSubmit}>
-            {/* ID Title */}
+            {/* Project Title */}
             <div className="form-group">
-                <label htmlFor="idTitle">ID Title</label>
+                <label htmlFor="idTitle">Project Title</label>
                 <input
                     type="text"
                     className="form-control"
@@ -37,7 +67,7 @@ const FormsUpdateProject = () => {
                     name="idTitle"
                     value={formData.idTitle}
                     onChange={handleChange}
-                    placeholder="Enter project ID title"
+                    placeholder="Enter project title"
                 />
             </div>
 
@@ -52,6 +82,19 @@ const FormsUpdateProject = () => {
                     onChange={handleChange}
                     placeholder="Enter project description"
                 ></textarea>
+            </div>
+            {/* Link */}
+            <div className="form-group">
+                <label htmlFor="link">Project Link</label>
+                <input
+                    type="text"
+                    className="form-control"
+                    id="link"
+                    name="link"
+                    value={formData.link}
+                    onChange={handleChange}
+                    placeholder="Enter project link"
+                />
             </div>
 
             {/* Completion Status */}

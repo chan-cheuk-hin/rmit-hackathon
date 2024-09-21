@@ -10,6 +10,9 @@
     border: 1px solid #000;
     background-color: rgb(255, 192, 245);
     margin-bottom: 40px;
+
+    border-radius: 15px;
+    box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.3);
 }
 
 .picture_event {
