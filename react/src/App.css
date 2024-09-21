@@ -158,3 +158,12 @@ code {
 .nav-bar {
 	text-decoration: none;
 }
+
+#align-end {
+	right: 10px;
+}
+
+/* -------------------- Login -------------------- */
+.login-page {
+	height: 100vh !important;
+}
