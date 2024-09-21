@@ -37,6 +37,7 @@ code {
 	width: 20vw;
 	height: 100%;
 	background-color: blue;
+	padding-top: 30px;
 }
 
 .mainContent {
@@ -90,10 +91,10 @@ code {
 .placeholderNotif {
 	width: 80%;
 	height: 200px;
-	background-color: rgba(38, 38, 38, 0.594);
 	border-radius: 5px;
 	margin: 10px;
 	justify-self: center;
+	align-self: center;
 }
 
 .hidden {

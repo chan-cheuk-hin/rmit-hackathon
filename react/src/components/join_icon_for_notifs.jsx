@@ -1,5 +1,5 @@
 import React from "react";
-import "./join_icon_for_notifs.css";
+import "./../icon_for_notifs.css";
 
 const FeatureBox = () => {
     return (

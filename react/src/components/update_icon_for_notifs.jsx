@@ -1,7 +1,7 @@
 import React from "react";
-import "./icon_for_notifs"; // Assuming you'll put the CSS in a separate file
+import "./../icon_for_notifs.css"; // Assuming you'll put the CSS in a separate file
 
-const FeatureBox = () => {
+const FeatureBox1 = () => {
     return (
         <div className="icon">
             {" "}
@@ -17,4 +17,4 @@ const FeatureBox = () => {
     );
 };
 
-export default FeatureBox;
+export default FeatureBox1;

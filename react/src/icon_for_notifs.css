@@ -1,7 +1,7 @@
 .icon {
     padding: 20px;
     border-radius: 10px;
-    background-color: rgb(181, 149, 213);
+    background-color: rgba(181, 149, 213, 0);
     display: inline-block;
 }
 
@@ -10,9 +10,8 @@
     height: 200px;
     background-color: #e5b0e4;
     border: 2px solid rgb(225, 217, 217);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    /* display: flex;
+    flex-direction: column; */
     align-items: center;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
