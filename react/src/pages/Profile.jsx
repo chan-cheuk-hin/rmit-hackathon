@@ -1,5 +1,5 @@
 import { Container, Card, Button, Badge, Row, Col } from "react-bootstrap";
-import "./styles.css";
+import "./../App.css";
 
 const Profile = () => {
 	return (
