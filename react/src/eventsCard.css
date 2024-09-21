@@ -2,12 +2,14 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    width: 800px;
+    justify-self: center;
+    width: 700px;
+    height: 90%;
 
-    margin: 20px;
     padding: 10px;
     border: 1px solid #000;
     background-color: rgb(255, 192, 245);
+    margin-bottom: 40px;
 }
 
 .picture_event {
@@ -16,7 +18,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 400px;
+    height: 30vh;
+    max-height: 100%;
 
 }
 

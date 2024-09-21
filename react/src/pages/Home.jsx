@@ -2,37 +2,34 @@ import '../App.css';
 import { useEffect, useState } from 'react';
 import Calendar from '../components/Calendar';
 import { Badge } from 'react-bootstrap';
+import EventsCard from '../components/eventsCard';
+import FeatureBox1 from '../components/update_icon_for_notifs';
+import FeatureBox from '../components/join_icon_for_notifs';
 
 const Home = () => {
 	const [isCollapsed, setIsCollapsed] = useState(true);
-	let eventArray = [
-		<div>
-            <Badge pill variant='primary'>
-                Science
-            </Badge>
-            <Badge pill variant='secondary'>
-                Technology
-            </Badge>sampleExpo1
-        </div>,
-		<div>sampleExpo2</div>,
-		<div>sampleExpo3</div>,
-	];
+	const [eventArray, setEventArray] = useState([])
+
 	const notifArray = [
-		<div>sampleNotif1</div>,
-		<div>sampleNotif2</div>,
-		<div>sampleNotif3</div>,
+		<FeatureBox1/>,
+		<FeatureBox/>,
+		<FeatureBox/>,
 	];
 
-	useEffect(() => {
-		eventArray = fetchHelper("getAllExpos");
-		console.log(eventArray);
+	useEffect(() =>  {
+		async function fetchData() {
+			let eventJson = await fetchHelper("getAllExpos");
+			console.log(eventJson);
+			setEventArray(eventJson.map((item,i) => <EventsCard key={i} date={item["datetime"]} organizers={item["organizers"]} participants={item["participants"]} tag={item["tags"]}/>));
+		}
+		fetchData();
 	}, [])
 
 	const fetchHelper = (request) => {
 		const data = new URLSearchParams();
 		data.append('message', request);
 
-		fetch("https://cchandrew.com/api/", {
+		let fetchReturn = fetch("https://cchandrew.com/api/", {
 		mode: 'cors',
 		method: 'POST',
 		body: data,
@@ -41,8 +38,9 @@ const Home = () => {
 		},
 		})
 		.then(response => response.json())
-		.then(data => console.log(data))
 		.then((data) => { return data;});
+
+		return fetchReturn;
 	};
 	
 
@@ -69,11 +67,7 @@ const Home = () => {
 			<div className='mainContent'>
 				<h1 className='title'>Upcoming Events: </h1>
 				<Calendar className='calendarContainer' />
-				{eventArray.map((item, i) => (
-					<div className='placeholderExpo' key={i}>
-						{item}
-					</div>
-				))}
+				{eventArray}
 			</div>
 		</div>
 	);
