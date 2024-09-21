@@ -3,12 +3,12 @@ import "./../App.css";
 
 const Profile = () => {
 	return (
-		<Container>
+		<Container style={{ backgroundColor: "#rgb(120, 211, 130)", padding: "20px" }}>
 			<Card className="profile-card">
 				<Card.Body>
 					<Row className="align-items-center">
 						{/* Profile Picture */}
-						<Col md={4} className="text-center">
+						<Col md={4} className="text-center .bg-info">
 							<img
 								src="path-to-image.jpg"
 								alt="Profile"
