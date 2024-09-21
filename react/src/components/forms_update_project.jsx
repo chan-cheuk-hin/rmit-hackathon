@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./forms_update_project.css";
+import "./../forms_update_project.css";
 
 const FormsUpdateProject = () => {
     const [formData, setFormData] = useState({

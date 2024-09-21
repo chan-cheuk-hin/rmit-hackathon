@@ -1,14 +1,18 @@
 import { Container, Card, Button, Badge, Row, Col } from "react-bootstrap";
 import "./../App.css";
+import { useState } from "react";
+import FormsUpdateProject from '../components/forms_update_project';
 
 const Profile = () => {
+	const [popup, setPopup] = useState(false);
+
 	return (
 		<Container style={{ backgroundColor: "#rgb(120, 211, 130)", padding: "20px" }}>
 			<Card className="profile-card">
 				<Card.Body>
 					<Row className="align-items-center">
 						{/* Profile Picture */}
-						<Col md={4} className="text-center .bg-info">
+						<Col md={4} className="text-center">
 							<img
 								src="path-to-image.jpg"
 								alt="Profile"
@@ -44,8 +48,10 @@ const Profile = () => {
 					style={{ height: "200px" }}
 				>
 					<Col md={6} className="text-center">
-						<Button variant="primary">ADD NEW PROJECT</Button>
-
+						<Button onClick={() => setPopup(!popup)} variant="primary">ADD NEW PROJECT</Button>
+						<div className={popup ? "visible" : "hidden"}>
+							<FormsUpdateProject/>
+						</div>
 					</Col>
 				</Row>
 
