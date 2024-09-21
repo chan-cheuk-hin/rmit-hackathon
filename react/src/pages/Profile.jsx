@@ -54,9 +54,9 @@ const Profile = () => {
 				// style={{ paddingBottom: "20px" }}
 				>
 					<Col md={6} className="text-center">
-						<div className="p-4 border m-3">Project name</div>
-						<Button variant="primary">Link to Project</Button>
-						<Button variant="primary">Update Project Progress</Button>
+						<div className="p-4 border">Project name</div>
+						<Button className="m-3" variant="primary">Link to Project</Button>
+						<Button className="m-3" variant="primary">Update Project Progress</Button>
 						<p>{false ? "Project is complete!" : "Project is not complete"}</p>
 					</Col>
 
