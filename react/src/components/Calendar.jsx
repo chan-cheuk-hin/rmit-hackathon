@@ -44,7 +44,7 @@ const Calendar = () => {
 	// EXAMPLE USAGE
 
 	return (
-		<div class='calendar-container'>
+		<div className='calendar-container'>
 			<div>
 				<p>Mon</p>
 				<p>Tue</p>
