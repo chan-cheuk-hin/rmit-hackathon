@@ -1,10 +1,14 @@
 import '../App.css';
 
 const TestDatabase = () => {
+	// Not working onClick, but is called on pageload. But at least we know api is ok now.
 	const fetchData = () => {
 		fetch('https://cchandrew.com/api/', {
 			method: 'GET',
-			// headers: {},
+			headers: {
+				Accept: 'application/json, text/plain, */*',
+				'Content-type': 'application/json',
+			},
 		})
 			.then((res) => res.json())
 			.then((data) => {

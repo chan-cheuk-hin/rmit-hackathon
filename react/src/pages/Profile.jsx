@@ -1,6 +1,5 @@
 import '../App.css';
 import { Container, Card, Button, Badge, Row, Col } from 'react-bootstrap';
-import TestDatabase from './TestDatabase';
 
 const Profile = () => {
 	return (
