@@ -14,6 +14,9 @@ const NavBar = () => {
 					<Link className='nav-link' to='profile'>
 						Profile
 					</Link>
+					<Link id='align-end' className='nav-link' to='login'>
+						Login
+					</Link>
 				</Nav>
 			</Container>
 		</Navbar>

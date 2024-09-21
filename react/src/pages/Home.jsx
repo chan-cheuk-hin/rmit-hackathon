@@ -1,11 +1,11 @@
 import '../App.css';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Calendar from '../components/Calendar';
 import { Badge } from 'react-bootstrap';
 
 const Home = () => {
 	const [isCollapsed, setIsCollapsed] = useState(true);
-	const eventArray = [
+	let eventArray = [
 		<div>
             <Badge pill variant='primary'>
                 Science
@@ -22,6 +22,29 @@ const Home = () => {
 		<div>sampleNotif2</div>,
 		<div>sampleNotif3</div>,
 	];
+
+	useEffect(() => {
+		eventArray = fetchHelper("getAllExpos");
+		console.log(eventArray);
+	}, [])
+
+	const fetchHelper = (request) => {
+		const data = new URLSearchParams();
+		data.append('message', request);
+
+		fetch("https://cchandrew.com/api/", {
+		mode: 'cors',
+		method: 'POST',
+		body: data,
+		headers: {
+			'Accept': 'application/json',
+		},
+		})
+		.then(response => response.json())
+		.then(data => console.log(data))
+		.then((data) => { return data;});
+	};
+	
 
 	return (
 		<div className='homeGrid'>
