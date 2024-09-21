@@ -8,6 +8,18 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+form {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #dca6a6;
+    /* Light grey solid background */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* Slight shadow for a card-like effect */
+    border: 1px solid #ddd;
+}
+
 /* Form Fields */
 .form-group {
     margin-bottom: 20px;
@@ -30,7 +42,7 @@
     border-radius: 5px;
     font-size: 14px;
     color: #333;
-    background-color: #e4aede;
+    background-color: #e6dbbb;
 }
 
 .form-group textarea {
@@ -70,7 +82,7 @@
 /* Error or Success Message Styling */
 .form-text.text-muted {
     font-size: 12px;
-    color: #539cdb;
+    color: #e6dbbb;
 }
 
 /* Responsive Form Design */

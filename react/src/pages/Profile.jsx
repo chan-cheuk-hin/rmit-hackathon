@@ -45,6 +45,7 @@ const Profile = () => {
 				>
 					<Col md={6} className="text-center">
 						<Button variant="primary">ADD NEW PROJECT</Button>
+
 					</Col>
 				</Row>
 
